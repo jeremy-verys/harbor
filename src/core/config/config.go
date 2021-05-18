@@ -420,6 +420,7 @@ func OIDCSetting() (*models.OIDCSetting, error) {
 		RedirectURL:        extEndpoint + common.OIDCCallbackPath,
 		Scope:              scope,
 		UserClaim:          cfgMgr.Get(common.OIDCUserClaim).GetString(),
+		EmailClaim:         cfgMgr.Get(common.OIDCEmailClaim).GetString(),
 		ExtraRedirectParms: cfgMgr.Get(common.OIDCExtraRedirectParms).GetStringToStringMap(),
 	}, nil
 }
